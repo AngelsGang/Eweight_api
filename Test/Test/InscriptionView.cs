@@ -55,9 +55,8 @@ namespace Test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(user.Name + user.Prenom);
+            AparaillageView test = new AparaillageView();
+            test.Show();
         }
-
-
     }
 }

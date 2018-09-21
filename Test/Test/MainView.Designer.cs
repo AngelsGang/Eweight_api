@@ -1,6 +1,6 @@
 ﻿namespace Test
 {
-    partial class Form1
+    partial class MainView
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -63,7 +63,6 @@
             this.Controls.Add(this.b_MainConnect);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

@@ -40,6 +40,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.numeric_Age = new System.Windows.Forms.NumericUpDown();
             this.spin_Taille = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_Password = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Age)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin_Taille)).BeginInit();
             this.SuspendLayout();
@@ -71,7 +73,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 33);
+            this.label1.Location = new System.Drawing.Point(52, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 5;
@@ -149,11 +151,29 @@
             this.spin_Taille.TabIndex = 17;
             this.spin_Taille.ValueChanged += new System.EventHandler(this.spin_Taille_ValueChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(52, 375);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "Mot de passe";
+            // 
+            // tb_Password
+            // 
+            this.tb_Password.Location = new System.Drawing.Point(219, 369);
+            this.tb_Password.Name = "tb_Password";
+            this.tb_Password.Size = new System.Drawing.Size(120, 26);
+            this.tb_Password.TabIndex = 19;
+            // 
             // InscriptionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 494);
+            this.Controls.Add(this.tb_Password);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.spin_Taille);
             this.Controls.Add(this.numeric_Age);
             this.Controls.Add(this.button2);
@@ -189,5 +209,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.NumericUpDown numeric_Age;
         private System.Windows.Forms.NumericUpDown spin_Taille;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tb_Password;
     }
 }

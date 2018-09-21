@@ -10,18 +10,12 @@ using System.Windows.Forms;
 
 namespace Test
 {
-    public partial class Form1 : Form
+    public partial class MainView : Form
     {
-        public Form1()
+        public MainView()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void bt_MainInscript_Click(object sender, EventArgs e)
         {

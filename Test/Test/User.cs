@@ -13,6 +13,7 @@ namespace Test
         private decimal age;
         private string email;
         private decimal taille;
+        private string password;
 
         public User()
         {}
@@ -22,6 +23,7 @@ namespace Test
         public decimal Age { get => age; set => age = value; }
         public string Email { get => email; set => email = value; }
         public decimal Taille { get => taille; set => taille = value; }
+        public string Password { get => password; set => password = value; }
     }
 }
 
