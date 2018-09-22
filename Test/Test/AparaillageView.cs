@@ -35,5 +35,10 @@ namespace Test
                 Lv_Appareil.Items.Add(objet);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

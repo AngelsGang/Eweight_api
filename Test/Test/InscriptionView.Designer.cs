@@ -164,8 +164,11 @@
             // 
             this.tb_Password.Location = new System.Drawing.Point(219, 369);
             this.tb_Password.Name = "tb_Password";
+            this.tb_Password.PasswordChar = '*';
             this.tb_Password.Size = new System.Drawing.Size(120, 26);
             this.tb_Password.TabIndex = 19;
+            this.tb_Password.TabStop = false;
+            this.tb_Password.UseSystemPasswordChar = true;
             // 
             // InscriptionView
             // 

@@ -24,7 +24,6 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
             this.Close();
         }
 
@@ -55,8 +54,15 @@ namespace Test
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AparaillageView test = new AparaillageView();
-            test.Show();
+            if((string.IsNullOrEmpty(tb_Email.Text)) && (string.IsNullOrEmpty(tb_Password.Text)) )
+            {
+                MessageBox.Show("Saisir obligatoirement une adresse mail et un mot de passe valide");
+            }
+            else
+            {
+                AparaillageView appareilView = new AparaillageView();
+                appareilView.Show();
+            }
         }
     }
 }
