@@ -131,7 +131,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 44);
             this.button2.TabIndex = 14;
-            this.button2.Text = "Suivant";
+            this.button2.Text = "Valider";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -169,6 +169,7 @@
             this.tb_Password.TabIndex = 19;
             this.tb_Password.TabStop = false;
             this.tb_Password.UseSystemPasswordChar = true;
+            this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged);
             // 
             // InscriptionView
             // 
@@ -191,6 +192,7 @@
             this.Controls.Add(this.tb_Name);
             this.Name = "InscriptionView";
             this.Text = "InscriptionView";
+            this.Load += new System.EventHandler(this.InscriptionView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Age)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spin_Taille)).EndInit();
             this.ResumeLayout(false);

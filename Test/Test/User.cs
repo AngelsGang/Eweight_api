@@ -14,9 +14,12 @@ namespace Test
         private string email;
         private decimal taille;
         private string password;
+        private bool etat;
 
         public User()
-        {}
+        {
+            etat = false;
+        }
 
         public string Name { get => name; set => name = value; }
         public string Prenom { get => prenom; set => prenom = value; }
@@ -24,6 +27,7 @@ namespace Test
         public string Email { get => email; set => email = value; }
         public decimal Taille { get => taille; set => taille = value; }
         public string Password { get => password; set => password = value; }
+        public bool Etat { get => etat; set => etat = value; }
     }
 }
 

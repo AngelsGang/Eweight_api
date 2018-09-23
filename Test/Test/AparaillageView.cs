@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Test
@@ -13,17 +6,11 @@ namespace Test
     public partial class AparaillageView : Form
     {
         Appareils objectConnected = new Appareils();
-        
+        InscriptionView inscription = new InscriptionView();
 
         public AparaillageView()
         {
             InitializeComponent();
-            
-        }
-
-        private void Lv_Appareil_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
         }
 
         private void AparaillageView_Load(object sender, EventArgs e)
@@ -31,14 +18,21 @@ namespace Test
 
             foreach (var objet in objectConnected.ListAppareils)
             {
-                
                 Lv_Appareil.Items.Add(objet);
             }
+
+            this.FormClosed += AparaillageView_FormClosed;
+        }
+
+        private void AparaillageView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+            inscription.Show();
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -14,6 +7,7 @@ namespace Test
     public partial class InscriptionView : Form
     {
         public User user = new User();
+        MainView accueil = new MainView();
 
         public InscriptionView()
         {
@@ -24,6 +18,9 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+
+            accueil.Show();
             this.Close();
         }
 
@@ -52,17 +49,33 @@ namespace Test
             user.Age = numeric_Age.Value;
         }
 
+        private void tb_Password_TextChanged(object sender, EventArgs e)
+        {
+            user.Password = tb_Password.Text;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if((string.IsNullOrEmpty(tb_Email.Text)) && (string.IsNullOrEmpty(tb_Password.Text)) )
+            if((string.IsNullOrEmpty(tb_Email.Text)) || (string.IsNullOrEmpty(tb_Password.Text)) )
             {
                 MessageBox.Show("Saisir obligatoirement une adresse mail et un mot de passe valide");
             }
             else
             {
-                AparaillageView appareilView = new AparaillageView();
-                appareilView.Show();
+                MessageBox.Show("Inscription validée");
+                this.Hide();
+                accueil.Show();
             }
+        }
+
+        private void InscriptionView_Load(object sender, EventArgs e)
+        {
+            this.FormClosed += InscriptionView_FormClosed;
+        }
+
+        private void InscriptionView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

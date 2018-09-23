@@ -44,7 +44,6 @@
             this.Lv_Appareil.TabIndex = 0;
             this.Lv_Appareil.UseCompatibleStateImageBehavior = false;
             this.Lv_Appareil.View = System.Windows.Forms.View.List;
-            this.Lv_Appareil.SelectedIndexChanged += new System.EventHandler(this.Lv_Appareil_SelectedIndexChanged);
             // 
             // Label_ApareillView
             // 
