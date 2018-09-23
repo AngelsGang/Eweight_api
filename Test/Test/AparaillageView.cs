@@ -6,7 +6,7 @@ namespace Test
     public partial class AparaillageView : Form
     {
         Appareils objectConnected = new Appareils();
-        InscriptionView inscription = new InscriptionView();
+        MainView accueil = new MainView();
 
         public AparaillageView()
         {
@@ -31,8 +31,8 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
-            inscription.Show();
+            this.Hide();
+            accueil.Show();
         }
     }
 }
