@@ -18,10 +18,8 @@ namespace Test
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
             accueil.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void tb_Name_TextChanged(object sender, EventArgs e)
